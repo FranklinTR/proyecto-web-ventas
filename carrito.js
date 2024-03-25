@@ -17,10 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
         carrito.forEach((producto) => {
             total += parseFloat(producto.price.substring(1)); // Elimina el signo de dólar y convierte el precio a número
             const row = document.createElement("tr");
+            row.classList.add("row-product");
             row.innerHTML = `
-                <td><img src="${producto.image}" alt="${producto.title}" style="width: 150px; height: 150px;display:block; margin: 0 auto; "></td>
-                <td>${producto.title}</td>
-                <td>${producto.price}</td>
+                <td class="content-img"><img src="${producto.image}" alt="${producto.title}" style="width: 150px; height: 150px;display:block; margin: 0 auto; "></td>
+                <td><span>${producto.title}</span></td>
+                <td><span>${producto.price}</span></td>
                 <td class="buttons-agr-red"><button class="borrar btn-agr" data-id="${producto.id}">+</button>
                 <span>0</span><button class="borrar btn-agr" data-id="${producto.id}">-</button>
                 </td>
