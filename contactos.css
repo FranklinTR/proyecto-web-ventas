@@ -235,11 +235,13 @@ th, td{
     
     }
 
-    .footer{
-        padding: 30px;
-    }
     .footer-content{
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .link{
+        flex-basis: calc(50% - 20px);
         text-align: center;
     }
 }
