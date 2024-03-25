@@ -18,10 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
             total += parseFloat(producto.price.substring(1)); // Elimina el signo de dólar y convierte el precio a número
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td><img src="${producto.image}" alt="${producto.title}"></td>
+                <td><img src="${producto.image}" alt="${producto.title}" style="width: 150px; height: 150px;display:block; margin: 0 auto; "></td>
                 <td>${producto.title}</td>
                 <td>${producto.price}</td>
-                <td><button class="borrar" data-id="${producto.id}">Eliminar</button></td>
+                <td class="buttons-agr-red"><button class="borrar btn-agr" data-id="${producto.id}">+</button>
+                <span>0</span><button class="borrar btn-agr" data-id="${producto.id}">-</button>
+                </td>
             `;
             listaCarrito.appendChild(row);
         });

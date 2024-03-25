@@ -14,7 +14,7 @@
         </main>
     </header>
 
-    <section>
+    <section class="section-pago">
         <div id="carrito">
             <table id="lista-carrito">
               <thead>
@@ -25,17 +25,22 @@
                   <th>Accion</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody>
+              </tbody>
             </table>
-            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+            <a href="#" id="vaciar-carrito" class="btn-2"><span >Vaciar carrito</span></a>
           </div>
+
+         <div class="content-pago">
+            <div class="col-lg-3 carrito-total">
+                <h2 class="card-total" >TOTAL: $  <span id="total-carrito"></span> </h2>
+            </div>
+            <div id="paypal-button-container" class="button-pago"></div>
+         </div>
     </section>
 
     <section class="pago">
-        <div class="col-lg-3">
-            <h2 class="card-total" >TOTAL: $  <span id="total-carrito"></span> </h2>
-        </div>
-        <div id="paypal-button-container"></div>
+
     </section>
 
     <footer class="footer">
