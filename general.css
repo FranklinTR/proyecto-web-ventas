@@ -32,18 +32,14 @@ body{
     overflow-x: hidden;
 }
 
-img{
-    max-width: 100%;
-    
-}
-
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
 
+
 .header{
-    min-height: 80vh;
+    min-height: 20vh;
     background-color: #f5f5f5;
     padding: 70px 0;
 
@@ -143,67 +139,6 @@ th, td{
     margin-bottom: 15px;
 }
 
-.header-txt p{
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-
-}
-
-.btn-1{
-    display: inline-block;
-    padding: 11px 25px;
-    background-color: #111111;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.ofert{
-    padding: 20px 0 0 0;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.ofert-1{
-    display: flex;
-    align-items: center;
-    flex-basis: calc(33.3% - 15px);
-    background-color: #f5f5f5;
-    padding: 35px;
-}
-
-.ofert-img{
-    flex-basis: 50%;
-    margin-right: 15px;
-}
-
-.ofert-img img{
-    width: 250px;
-
-}
-
-.ofert-txt{
-    flex-basis: 50%;
-    text-align: center;
-}
-.ofert-txt h3{
-    color: #111111;
-    font-family: 'Oswald',sans-serif;
-    font-size: 25px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.btn-2{
-    display: inline-block;
-    padding: 7px 10px;
-    background-color: #111111;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 15px;
-}
-
 .products{
     padding: 50px 0;
     text-align: center;
@@ -219,55 +154,29 @@ th, td{
 
 }
 .product-content{
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: visible;
-    align-items: center;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-    width: calc(300px * 12 + 30px * 11);
-    height:  700px;
-    animation: moveLeftRight 30s infinite linear;
+
 }
 
-@keyframes moveLeftRight {
-    0% {
-        transform: translateX(0); 
-    }
-    100% {
-        transform: translateX(calc(-300px * 6 - 20px * 5));
-    }
-}
-  
 .product{
-    width: 500px;
-    max-height: 500px;
     text-align: center;
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform .4s ease-out;
-    scroll-snap-align: start;
 }
 
 .product:hover{
-    transform: scale(1.2);
+    transform: scale(.9);
 }
 
 .product img{
-    flex-basis: 20%;
-    text-align: center;
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
+    width: 220px;
+    height: 200px;
+    margin-bottom: 20px;
 }
-
-.product .img {
-    height: 250px; 
-}
-
 
 .product h3{
     font-size: 20px;
@@ -283,74 +192,8 @@ th, td{
     margin-bottom: 15px;
 
 }
-
-.precio{
-    font-weight: 800;
-}
-
-.icons{
-    padding: 50px 0 100px 0;
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.icon-1{
-    flex-basis: calc(33.3% - 30px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
-    background-color: #f5f5f5;
-
-}
-
-.icon-txt {
- font-size: 20px;
- color: #111111;
- font-family: 'Oswald', sans-serif;
- text-transform: uppercase;
-
-}
-
-.icon-txt p{
-    font-size:  16px;
-    color: #111111;
-}
-
-
-.blog{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 100px;
-
-}
-
-.blog-1{
-    flex-basis: calc(33.3% - 30px);
-}
-
-.blog-1 img{
-    margin-bottom: 20px;
-    border-radius: 5px;
-    
-}
-
-.blog-1 h3{
-    font-size: 20px;
-    color: #111111;
-    font-family: 'Oswald',sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.blog-1 p{
-    font-size: 16px;
-    color: #111111;
-
-}
 .footer{
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #111111;
 }
 .footer-content{
@@ -370,6 +213,7 @@ th, td{
 .link a{
     font-size: 16px;
     color: #DCDCDC;
+    /*Para poder aplicar margin, al ser un elemento en línea*/
     display: block;
     margin-bottom: 10px;
 }
@@ -413,6 +257,7 @@ th, td{
         min-width: 100%;
 
     }
+
     .header{
         min-height: 0vh;
 
@@ -434,14 +279,7 @@ th, td{
         font-size: 70px;
     
     }
-    .ofert{
-        padding: 30px 30px 0 30px;
-        flex-direction: column;
-    }
-    .ofert-1{
-        margin-bottom: 30px;
-    }
-
+    
     .products{
         padding: 0 30px 30px 30px;
     }
@@ -451,33 +289,15 @@ th, td{
 
     .product-content{
         grid-template-columns: repeat(1, 1fr);
-        gap: 50px;
+        gap: 30px;
     }
 
     .product img{
-        height: auto;
-        flex-basis: 50%;
-        text-align: center;
-        max-width: 100%;
-        margin-top: 5px;
+        width: 200px;
+        height: 280px;
         
     }
 
-    .icons{
-        padding: 30px;
-        flex-direction: column;
-    }
-    .icon-1{
-        margin-bottom: 30px;
-    }
-
-    .blog{
-        padding: 0 30px 30px 30px;
-        flex-direction: column;
-    }
-    .blog-1{
-        margin-bottom: 30px;
-    }
     .footer{
         padding: 30px;
     }

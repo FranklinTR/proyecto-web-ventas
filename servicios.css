@@ -11,6 +11,7 @@ font-family: 'Poppins', sans-serif;
     src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
 }
 
+
 html{
     box-sizing: border-box;
 }
@@ -139,61 +140,8 @@ th, td{
     margin-bottom: 15px;
 }
 
-.products{
-    padding: 50px 0;
-    text-align: center;
-
-}
-
-.products h2{
-    color: #111111;
-    font-family: 'Oswald',sans-serif;
-    font-size: 50px;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-
-}
-.product-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-
-}
-
-.product{
-    text-align: center;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform .4s ease-out;
-}
-
-.product:hover{
-    transform: scale(.9);
-}
-
-.product img{
-    width: 250px;
-    height: 370px;
-    margin-bottom: 20px;
-}
-
-.product h3{
-    font-size: 20px;
-    color: #111111;
-    font-family: 'Oswald',sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.product p, .precio{
-    font-size: 16px;
-    color: #111111;
-    margin-bottom: 15px;
-
-}
 .footer{
-    padding: 20px 0;
+    padding: 50px 0;
     background-color: #111111;
 }
 .footer-content{
@@ -217,6 +165,8 @@ th, td{
     display: block;
     margin-bottom: 10px;
 }
+
+
 
 @media screen and (max-width:991px) {
     
@@ -257,7 +207,6 @@ th, td{
         min-width: 100%;
 
     }
-
     .header{
         min-height: 0vh;
 
@@ -278,24 +227,6 @@ th, td{
     .header-txt h1{
         font-size: 70px;
     
-    }
-    
-    .products{
-        padding: 0 30px 30px 30px;
-    }
-    .products h2{
-        margin-bottom: 30px;
-    }
-
-    .product-content{
-        grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
-    }
-
-    .product img{
-        width: 200px;
-        height: 280px;
-        
     }
 
     .footer{
