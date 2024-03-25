@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="carrito.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=ATufh76xP5xwrDYiJw24WwOy-j2Lj4__Hr267FdDjff0e8BAOzrWHwNqtQSiOcGDAJcwKE3fowwRw7mS&currency=USD"></script>
+</head>
+<body>
+    <header class="header">
+        <main class="products container" id="lista-1">
+            <h2>Carrito de Compras</h2>
+        </main>
+    </header>
+
+    <section>
+        <div id="carrito">
+            <table id="lista-carrito">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Accion</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+          </div>
+    </section>
+
+    <section class="pago">
+        <div class="col-lg-3">
+            <h2 class="card-total" >TOTAL: $  <span id="total-carrito"></span> </h2>
+        </div>
+        <div id="paypal-button-container"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+img{
+    width: 250px;
+    height: 200px;  
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.products{
+    padding: 40px 0;
+    text-align: center;
+
+}
+
+.products h2{
+    color: #111111;
+    font-family: 'Oswald',sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+}
+
+.footer{
+    padding: 50px 0;
+    background-color: #111111;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.link h3{
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.link a{
+    font-size: 16px;
+    color: #DCDCDC;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*css nuevo*/
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header h2 {
+    text-align: center;
+}
+
+.pago {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el carrito */
+#lista-carrito {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#lista-carrito th, #lista-carrito td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#lista-carrito th {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+}
+
+#carrito {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#vaciar-carrito {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.card-total {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#paypal-button-container {
+    text-align: center;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para la tabla del carrito */
+#lista-carrito {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#lista-carrito th, #lista-carrito td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#lista-carrito th {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+}
+
+
+@media screen and (max-width:991px) {
+    
+    .header{
+        min-height: 0vh;
+
+    }
+    .products{
+        padding: 0 30px 30px 30px;
+    }
+    .products h2{
+        margin-bottom: 30px;
+    }
+    .footer{
+        padding: 30px;
+    }
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Reducir el tamaño de la fuente de los th */
+    #lista-carrito th {
+        font-size: 14px;
+    }
+
+    /* Ajustar el ancho de los elementos en la tabla */
+    #lista-carrito th, #lista-carrito td {
+        padding: 5px; /* Reducir el espacio interno */
+        font-size: 12px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Ajustar el ancho del botón "Vaciar carrito" */
+    #vaciar-carrito {
+        padding: 8px; /* Reducir el espacio interno */
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Ajustar el tamaño de las imágenes en la tabla */
+    #lista-carrito img {
+        max-width: 120px; /* Limitar el ancho máximo de las imágenes */
+        height: auto; /* Mantener la proporción de aspecto */
+    }
+    
+}
