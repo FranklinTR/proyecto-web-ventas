@@ -287,6 +287,9 @@ body {
         justify-content: space-between;
         align-items: center;
     }
+    #vaciar-carrito{
+        width: 20%;
+    }
 }
 
 

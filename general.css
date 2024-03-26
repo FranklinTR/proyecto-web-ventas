@@ -153,16 +153,63 @@ th, td{
     margin-bottom: 50px;
 
 }
-.product-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+
+@media screen and (min-width: 480px) {
+    
+    .product-content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        
+    }
+    .product{
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media screen  and (min-width: 768px) {
+    .product-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    
+    }
+    
+}
+@media  screen and (min-width: 1024px) {
+    .product-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    
+    }
+    .product-content .product:nth-child(1){
+        
+            margin-left:  1rem;
+        
+    }
+
+    .product-content .product:nth-child(3){
+        
+        margin-right: 1rem;
+    }
+
+    .product-content .product:nth-child(4){
+        
+        margin-left:  1rem;
+    
+}
+
+.product-content .product:nth-child(6){
+    
+    margin-right: 1rem;
+}
 
 }
 
 .product{
     text-align: center;
-    padding: 30px;
+    padding: 1.5rem;
     box-shadow: 0 0 0.75rem rgba(0,0,0,.2);
     border-radius: 0.40rem;
     transition: transform .4s ease-out;
@@ -196,10 +243,15 @@ th, td{
 .footer{
     padding: 20px 0;
     background-color: #111111;
+    width: calc(100%);
+
 }
 .footer-content{
     display: flex;
+    padding: 1rem;
     justify-content: space-between;
+    width: 100%;
+
 }
 
 .link h3{
@@ -319,10 +371,6 @@ th, td{
         margin-bottom: 30px;
     }
 
-    .product-content{
-        grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
-    }
 
     .product img{
         width: 200px;
