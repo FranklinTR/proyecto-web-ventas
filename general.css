@@ -223,8 +223,14 @@ th, td{
     width: 240px;
     height: 320px;
     margin-bottom: 20px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .2))
 }
+
+/********Para dar tamaño a una sola imagen modificar el numero********/
+/*#_4{
+    width: 300px;
+    height: 400px;
+}*/
+/*******/
 
 .product h3{
     font-size: 20px;
