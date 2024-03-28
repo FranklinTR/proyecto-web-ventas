@@ -48,7 +48,7 @@
                 <li>Dirección: Av. Moda #123, Ciudad Moda, País</li>
             </ul>
             <p>O si prefieres, completa el siguiente formulario y nos pondremos en contacto contigo:</p>
-            <form action="enviar.php" method="POST">
+            <form action="index.html" method="POST">
               <h3>Mensaje</h3>
                <!-- <label for="nombre">Nombre:</label>-->
                 <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required>
@@ -62,37 +62,48 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-content container">
-            <div class="link">
-                <h3>Lorem</h3>
-                <ul>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                </ul>
-            </div>
-            <div class="link">
-                <h3>Lorem</h3>
-                <ul>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                </ul>
-            </div>
-            <div class="link">
-                <h3>Lorem</h3>
-                <ul>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                </ul>
-            </div>
-            <div class="link">
-                <h3>Lorem</h3>
-                <ul>
-                    <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+      <div class="footer-content container">
+          <div class="link">
+              <h3>Contacto</h3>
+              <ul>
+                  <li>Dirección: Av. Prolongacion Javier Prado 9515</li>
+                  <li>Teléfono: 994001450</li>
+                  <li>RUC: 10253061647</li>
+              </ul>
+          </div>
+          <div class="link">
+              <h3>Horario de Atención</h3>
+              <ul>
+                  <li>Lunes a Viernes: 9:00 AM - 8:00 PM</li>
+                  <li>Sábados y Domingos: 10:00 AM - 6:00 PM</li>
+              </ul>
+          </div>
+          <div class="link">
+              <h3>Redes Sociales</h3>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter</a></li>
+              </ul>
+          </div>
+          <div class="link">
+              <h3>Servicios</h3>
+              <ul>
+                  <li>Envíos a domicilio disponibles</li>
+                  <li>Amplia variedad de tallas y estilos</li>
+                  <li>Promociones especiales para clientes frecuentes</li>
+              </ul>
+          </div>            
+      </div>
+  </footer>
+    <script>
+      const d = document;
+      const $imgCarrito = d.getElementById("img-carrito");
+      // Evento click en la imagen del carrito para ir al carrito
+      $imgCarrito.addEventListener("click", () => {
+          window.location.href = "carrito.html";
+      });
+    </script>
 </body>
 
 </html>
