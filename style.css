@@ -84,7 +84,7 @@ img{
 .menu .navbar ul li a{
     font-size: 18px;
     padding: 20px;
-    color: #111111;
+    color: #000000;
     display: block;
 }
 
@@ -233,6 +233,30 @@ th, td{
     animation: moveLeftRight 30s infinite linear;
 }
 
+/* Estilos para el scroll */
+/* Barra de scroll */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de scroll */
+    height: 10px; /* altura de la barra de scroll */
+}
+
+/* Riel (track) del scroll */
+::-webkit-scrollbar-track {
+    background: #ccc;
+    border-radius: 4px; 
+}
+
+/* Manija (thumb) del scroll */
+::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2); 
+}
+
+/* Estilo cuando se pasa el mouse sobre la manija del scroll */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #999999; /* Color de la manija del scroll al pasar el mouse */
+}
+
 @keyframes moveLeftRight {
     0% {
         transform: translateX(0); 
@@ -365,7 +389,6 @@ th, td{
     display: flex;
     justify-content: space-between;
 }
-
 .link h3{
 
     font-size: 18px;
@@ -373,6 +396,10 @@ th, td{
     font-family: 'Oswald',sans-serif;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+
+.link li{
+    color: #fff;
 }
 
 .link a{
@@ -401,7 +428,6 @@ th, td{
         padding: 0; 
         margin: 0 0;
     }
-    
 }
 @media  screen and (min-width: 768px){
     .product{
@@ -416,6 +442,27 @@ th, td{
 }
 
 @media screen and (min-width: 1024px){
+    
+    .link:nth-child(1) {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .link:nth-child(2) {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .link:nth-child(3) {
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+    .link:nth-child(4){
+        margin-right: 10px; 
+        margin-left: 30px; 
+    }
+
     .product{
         height: 500px;
     }
@@ -429,6 +476,15 @@ th, td{
 
 @media screen and (max-width:991px) {
     
+    /* Anulación de las reglas de margen en los elementos .link */
+    .link:nth-child(1),
+    .link:nth-child(2),
+    .link:nth-child(3),
+    .link:nth-child(4) {
+        margin-right: 0; /* Anula el margen derecho */
+        margin-left: 0; /* Anula el margen izquierdo */
+    }
+
     .menu{
         padding: 20px;
     }

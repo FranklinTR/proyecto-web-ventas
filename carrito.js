@@ -116,3 +116,14 @@ paypal.Buttons({
     }
     }).render("#paypal-button-container");
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Selecciona la imagen de la flecha por su ID
+    var flechaAtras = document.getElementById('flechaAtras');
+
+    // Agrega un evento de clic a la imagen de la flecha
+    flechaAtras.addEventListener('click', function () {
+        // Utiliza la función window.history.back() para regresar a la página anterior
+        window.history.back();
+    });
+});
