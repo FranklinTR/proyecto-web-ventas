@@ -37,7 +37,8 @@ document.querySelectorAll('.agregar-barrito').forEach(btn => {
                 id: productoId,
                 title: this.parentNode.querySelector('h3').textContent,
                 price: this.parentNode.querySelector('.precio').textContent,
-                image: this.parentNode.parentNode.querySelector('img').src
+                image: this.parentNode.parentNode.querySelector('img').src,
+                quantity: 1
             };
 
             // Obtener el carrito del localStorage o inicializarlo como un array vacío
