@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <td class="content-img"><img src="${producto.image}" alt="${producto.title}" style="width: 150px; height: 150px;display:block; margin: 0 auto; "></td>
                 <td><span>${producto.title}</span></td>
                 <td><span>${producto.price}</span></td>
-                <td class="buttons-agr-red"><button class="borrar btn-agr" data-id="${producto.id}">+</button>
-                <span>0</span><button class="borrar btn-agr" data-id="${producto.id}">-</button>
+                <td class="buttons-agr-red"><button class="btn-agr" data-id="${producto.id}">+</button>
+                <span>${producto.quantity}</span><button class="btn-red" data-id="${producto.id}">-</button>
                 </td>
             `;
             listaCarrito.appendChild(row);
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Actualiza el total en el HTML
         totalElement.textContent = `${total.toFixed(2)}`;
     }
+    
 
     // Función para vaciar el carrito
     function vaciarCarrito() {
@@ -116,6 +117,75 @@ paypal.Buttons({
     }
     }).render("#paypal-button-container");
 });
+
+//Actualizar precio carrito
+const actualizarPrecioCarrito=(id, opcion)=> {
+    // Verifica si hay elementos guardados en localStorage
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const totalElement = document.getElementById("total-carrito");
+
+    console.log(id);
+    let total = 0;
+
+    if(opcion === "restar"){
+        carrito.forEach((producto) => {
+            if(producto.id === id){
+                producto.quantity -= 1;
+            }
+        });
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+    if(opcion === "sumar"){
+        carrito.forEach((producto) => {
+            if(producto.id === id){
+                producto.quantity += 1;
+            }
+        });
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+
+    carrito.forEach((producto) => {
+        total += parseFloat(producto.price.substring(1)) * producto.quantity; // Elimina el signo de dólar y convierte el precio a número
+        console.log(producto);
+    });
+    // Agrega los elementos del carrito al HTML y calcula el total
+
+
+    // Actualiza el total en el HTML
+    console.log(total);
+    totalElement.textContent = `${total.toFixed(2)}`;
+}
+const actualizarPrecioSpan=()=>{
+
+
+}
+
+document.addEventListener("click", (e)=> {
+    const $buttonAgr = document.querySelector(".btn-agr");
+    const $buttonRed = document.querySelector(".btn-red");
+    if(e.target.matches("button.btn-red")){
+        console.log(e.target)
+        let cantidad = e.target.parentElement.querySelector("span");
+        console.log(cantidad)
+        let cantidadNum = parseInt(cantidad.textContent);
+        if(cantidadNum > 0){
+            cantidad.textContent = cantidadNum - 1;
+            //está mal la línea 149?
+            
+            actualizarPrecioCarrito($buttonRed.dataset.id, "restar");
+        }
+    }
+    if(e.target.matches("button.btn-agr")){
+        console.log(e.target)
+
+        console.log("click en btn-agr")
+        let cantidad = e.target.parentElement.querySelector("span");
+        let cantidadNum = parseInt(cantidad.textContent);
+        cantidad.textContent = cantidadNum + 1;
+        actualizarPrecioCarrito($buttonAgr.dataset.id, "sumar");
+    }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Selecciona la imagen de la flecha por su ID
