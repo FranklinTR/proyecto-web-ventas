@@ -442,7 +442,7 @@ th, td{
 }
 
 @media screen and (min-width: 1024px){
-    
+
     .link:nth-child(1) {
         margin-right: 10px;
         margin-left: 20px;
@@ -475,7 +475,7 @@ th, td{
 }
 
 @media screen and (max-width:991px) {
-    
+
     /* Anulación de las reglas de margen en los elementos .link */
     .link:nth-child(1),
     .link:nth-child(2),
