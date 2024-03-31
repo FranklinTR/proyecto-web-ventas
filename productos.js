@@ -65,6 +65,80 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener("click", (e) => {
+    console.log(e.target);
+
+    if(e.target.matches(".product .detalle-producto")){
+        const enlacesCarrito = document.querySelectorAll('.detalle-producto');
+        const $modal = document.querySelector(".modal");
+        const template = document.querySelector("#template-modal").content;
+        const $fragmente = document.createDocumentFragment();
+        $modal.classList.toggle("is-active");
+        $modal.innerHTML = null;
+        let id = e.target.getAttribute("data-id");
+        console.log(id);
+
+        let productos = JSON.parse(localStorage.getItem("carrito"));
+        console.log(productos);
+
+        const producto = productos.filter((el) => el.id == parseInt(id));
+
+        template.querySelector("img").src = producto[0].image;
+        template.querySelector(".modal-txt h3").textContent = producto[0].title;
+        template.querySelector(".modal-txt #modal-descripcion").textContent = producto[0].description || "No hay descripción";
+        template.querySelector(".modal-txt #modal-precio").textContent = producto[0].price;
+
+       
+    //Verificando para saber si el producto ya está en el carrito
+            const productoId = producto[0].id;
+            console.log(productoId);
+            if (verificarProductoEnCarrito(id)) {
+                console.log("El producto ya está en el carrito");
+                template.querySelector(".link-carrito").classList.toggle("none");
+
+                template.querySelector(".link-carrito").classList.toggle("is-active-btn");
+
+            }
+            else{
+                console.log("El producto no está en el carrito");
+                template.querySelector(".agregar-barrito").classList.toggle("none");
+                template.querySelector(".agregar-barrito").classList.toggle("is-active-btn");
+            }
+
+            const $clone = d.importNode(template, true);
+
+            $fragmente.appendChild($clone);
+            $modal.appendChild($fragmente);
+    
+        /*
+        let producto = JSON.parse(localStorage.getItem("productos"));
+        console.log(producto);
+        producto = producto.filter((el) => el.id == id);
+        console.log(producto);
+        const $modalContent = document.querySelector(".modal-content");
+        $modalContent.querySelector("img").src = producto[0].image;
+        $modalContent.querySelector(".modal-txt h3").textContent = producto[0].title;
+        $modalContent.querySelector(".modal-txt #modal-descripcion").textContent = producto[0].description;
+        $modalContent.querySelector(".modal-txt #modal-precio").textContent = producto[0].price;
+        */
+        /*
+        let $div = d.createElement("div");
+        $div.classList.add("info-producto");
+        $div.innerHTML = `
+        <h3>${producto[0].title}</h3>
+        <p>${producto[0].description}</p>
+        <p class="precio">${producto[0].price}</p>
+        <button class="agregar-barrito" data-id="${producto[0].id}">Agregar al carrito</button>
+        `;
+        e.target.parentElement.appendChild($div);
+    */
+    }
+    if(e.target.matches(".modal") || e.target.matches(".modal .cerrar-modal")) {
+        const $modal = document.querySelector(".modal");
+        $modal.classList.toggle("is-active");
+    }
+});
+
 
 
 /*

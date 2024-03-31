@@ -48,7 +48,10 @@
                     <p class="precio">$70</p>
                     <a href="#" class="agregar-barrito btn2" data-id="1">
                         Agregar al carrito
-                    </a>         
+                    </a>    
+                    <button class=" detalle-producto btn2" data-id="1">
+                        Ver Detalles
+                    </button>       
                 </div>
             </div>
             <div class="product">
@@ -59,7 +62,10 @@
                     <p class="precio">$70</p>
                     <a href="#" class="agregar-barrito btn2" data-id="2">
                         Agregar al carrito
-                    </a>         
+                    </a>   
+                    <button href="#" class="detalle-producto btn2" data-id="2">
+                        Ver Detalles
+                    </button>        
                 </div>
             </div>
             <div class="product">
@@ -70,7 +76,10 @@
                     <p class="precio">$80</p>
                     <a href="#" class="agregar-barrito btn2" data-id="3">
                         Agregar al carrito
-                    </a>         
+                    </a>    
+                    <button href="#" class="detalle-producto btn2" data-id="3">
+                        Ver Detalles
+                    </button>       
                 </div>
             </div>
             <div class="product">
@@ -392,7 +401,37 @@
             </div>
 
         </div>
+
+        <article class="modal">
+           
+        </article>
     </main>
+
+    <template id="template-modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                <h3 >Detalle de Producto</h3>
+
+            </div>
+            <div class="modal-img">
+                <img src="images/1.png" alt="" id="modal-img">
+            </div>
+            <div class="modal-txt">
+                <h3 id="modal-nombre">Camisa Corduroy</h3>
+                <p id="modal-descripcion">Regular Fit</p>
+                <p class="precio" id="modal-precio">$70</p>
+                <a href="#" class="agregar-barrito btn2 none" id="modal-agregar">
+                    Agregar al carrito
+                </a>
+                <a href="carrito.html" class="link-carrito btn2 none" id="modal-agregar">
+                    Agregar al carrito
+                </a>
+            </div>
+                        <button class="cerrar-modal">X</button>
+
+        </div>
+
+    </template>
 
     <footer class="footer">
         <div class="footer-content container">
