@@ -217,35 +217,115 @@ th, td{
     display: block;
     margin-bottom: 10px;
 }
+
+
+/* Estilo para el botón "Agregar al carrito" */
 .agregar-barrito.btn2 {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; /* Color azul */
-    color: #fff; /* Texto blanco */
     text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    border: 2px solid transparent; /* Cambia el color de borde según sea necesario */
+    padding: 15px;
+    color: #000; /* Color del texto */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
 }
 
-.agregar-barrito.btn2:hover {
-    background-color: #065cb8; /* Color azul más oscuro al pasar el mouse */
+.agregar-barrito.btn2 span {
+    position: relative;
+    z-index: 3;
 }
+
+.agregar-barrito.btn2::before,
+.agregar-barrito.btn2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none; /* Evita que los seudoelementos interfieran con los eventos del mouse */
+}
+
+.agregar-barrito.btn2::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #010100; /* Color del borde superior */
+    border-bottom: 2px solid #010100; /* Color del borde inferior */
+    transform: scaleY(0);
+    z-index: 2;
+}
+
+.agregar-barrito.btn2:hover::before {
+    transform: scaleY(1);
+}
+
+.agregar-barrito.btn2::after {
+    top: 0;
+    right: 0;
+    border-right: 2px solid #010100; /* Color del borde derecho */
+    border-left: 2px solid #010100; /* Color del borde izquierdo */
+    transform: scaleX(0);
+    z-index: 2;
+}
+
+.agregar-barrito.btn2:hover::after {
+    transform: scaleX(1);
+}
+
+/* Estilo para el botón "Ir al carrito" */
 
 .link-carrito {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000000; /* Color azul */
-    color: #fff; /* Texto blanco */
     text-decoration: none;
-    border: none;
+    border: 2px solid transparent; /* Cambia el color de borde según sea necesario */
+    padding: 10px 20px;
+    color: #000000; /* Color del texto */
+    text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-.link-carrito:hover {
-    background-color: #6c757d; /* Color gris */
+.link-carrito span {
+    position: relative;
+    z-index: 3;
+}
+
+.link-carrito::before,
+.link-carrito::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none; /* Evita que los seudoelementos interfieran con los eventos del mouse */
+}
+
+.link-carrito::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #000000; /* Color del borde superior */
+    border-bottom: 2px solid #000000; /* Color del borde inferior */
+    transform: scaleY(0);
+    z-index: 2;
+}
+
+.link-carrito:hover::before {
+    transform: scaleY(1);
+}
+
+.link-carrito::after {
+    top: 0;
+    right: 0;
+    border-right: 2px solid #000000; /* Color del borde derecho */
+    border-left: 2px solid #000000; /* Color del borde izquierdo */
+    transform: scaleX(0);
+    z-index: 2;
+}
+
+.link-carrito:hover::after {
+    transform: scaleX(1);
 }
 
 /* Estilos para el scroll */

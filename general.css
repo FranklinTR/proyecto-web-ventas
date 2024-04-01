@@ -279,49 +279,172 @@ td {
   margin-bottom: 10px;
 }
 
-.agregar-barrito.btn2 {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff; /* Color azul */
-  color: #fff; /* Texto blanco */
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
-}
-
+/* Estilo para el detalle del producto */
 .detalle-producto {
-  display: inline-block;
-  font-size: 1rem;
-  padding: 12.5px 20px;
-  background-color: #007bff; /* Color azul */
-  color: #fff; /* Texto blanco */
   text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
-}
-
-.agregar-barrito.btn2:hover {
-  background-color: #065cb8; /* Color azul más oscuro al pasar el mouse */
-}
-
-.link-carrito {
-  display: inline-block;
+  border: 2px solid transparent; /* Cambia el color de borde según sea necesario */
   padding: 10px 20px;
-  background-color: #000000; /* Color azul */
-  color: #fff; /* Texto blanco */
-  text-decoration: none;
-  border: none;
+  color: #000000; /* Color del texto */
+  text-transform: uppercase;
   border-radius: 5px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; /* Fondo transparente */
 }
 
-.link-carrito:hover {
-  background-color: #6c757d; /* Color gris */
+.detalle-producto span {
+  position: relative;
+  z-index: 3;
 }
+
+.detalle-producto::before,
+.detalle-producto::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none; /* Evita que los seudoelementos interfieran con los eventos del mouse */
+  background-color: transparent; /* Fondo transparente */
+}
+
+.detalle-producto::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid #000000; /* Color del borde superior */
+  border-bottom: 2px solid #000000; /* Color del borde inferior */
+  transform: scaleY(0);
+  z-index: 2;
+}
+
+.detalle-producto:hover::before {
+  transform: scaleY(1);
+}
+
+.detalle-producto::after {
+  top: 0;
+  right: 0;
+  border-right: 2px solid #000000; /* Color del borde derecho */
+  border-left: 2px solid #000000; /* Color del borde izquierdo */
+  transform: scaleX(0);
+  z-index: 2;
+}
+
+.detalle-producto:hover::after {
+  transform: scaleX(1);
+}
+
+/* Estilo para el botón "Agregar al carrito" */
+.agregar-barrito.btn2 {
+  text-decoration: none;
+  border: 2px solid transparent; /* Cambia el color de borde según sea necesario */
+  padding: 15px;
+  color: #000; /* Color del texto */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.agregar-barrito.btn2 span {
+  position: relative;
+  z-index: 3;
+}
+
+.agregar-barrito.btn2::before,
+.agregar-barrito.btn2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none; /* Evita que los seudoelementos interfieran con los eventos del mouse */
+}
+
+.agregar-barrito.btn2::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid #010100; /* Color del borde superior */
+  border-bottom: 2px solid #010100; /* Color del borde inferior */
+  transform: scaleY(0);
+  z-index: 2;
+}
+
+.agregar-barrito.btn2:hover::before {
+  transform: scaleY(1);
+}
+
+.agregar-barrito.btn2::after {
+  top: 0;
+  right: 0;
+  border-right: 2px solid #010100; /* Color del borde derecho */
+  border-left: 2px solid #010100; /* Color del borde izquierdo */
+  transform: scaleX(0);
+  z-index: 2;
+}
+
+.agregar-barrito.btn2:hover::after {
+  transform: scaleX(1);
+}
+
+/* Estilo para el enlace que lleva al carrito */
+.link-carrito {
+  text-decoration: none;
+  border: 2px solid transparent; /* Cambia el color de borde según sea necesario */
+  padding: 10px 20px;
+  color: #000000; /* Color del texto */
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; /* Fondo transparente */
+}
+
+.link-carrito span {
+  position: relative;
+  z-index: 3;
+}
+
+.link-carrito::before,
+.link-carrito::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none; /* Evita que los seudoelementos interfieran con los eventos del mouse */
+  background-color: transparent; /* Fondo transparente */
+}
+
+.link-carrito::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid #000000; /* Color del borde superior */
+  border-bottom: 2px solid #000000; /* Color del borde inferior */
+  transform: scaleY(0);
+  z-index: 2;
+}
+
+.link-carrito:hover::before {
+  transform: scaleY(1);
+}
+
+.link-carrito::after {
+  top: 0;
+  right: 0;
+  border-right: 2px solid #000000; /* Color del borde derecho */
+  border-left: 2px solid #000000; /* Color del borde izquierdo */
+  transform: scaleX(0);
+  z-index: 2;
+}
+
+.link-carrito:hover::after {
+  transform: scaleX(1);
+}
+
 
 /* Estilos para el scroll */
 /* Barra de scroll */
