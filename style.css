@@ -149,14 +149,14 @@ th, td{
     margin-bottom: 20px;
 
 }
-
+/*
 .btn-1{
     display: inline-block;
     padding: 11px 25px;
     background-color: #111111;
     color: #fff;
     border-radius: 5px;
-}
+}*/
 
 .ofert{
     padding: 20px 0 0 0;
@@ -194,7 +194,7 @@ th, td{
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-
+/*
 .btn-2{
     display: inline-block;
     padding: 7px 10px;
@@ -202,7 +202,7 @@ th, td{
     color: #fff;
     border-radius: 5px;
     font-size: 15px;
-}
+}*/
 
 .products{
     padding: 50px 0;
@@ -321,18 +321,160 @@ th, td{
 }
 
 .icons{
-    padding: 50px 0 100px 0;
+    padding: 50px 0 10px 0;
     display: flex;
     justify-content: space-between;
     
 }
 
+/* Estilo para el botón "informacio btn-2" */
+.btn-2 {
+    text-decoration: none;
+    border: 2px solid transparent; /* Cambia el color de borde según sea necesario */
+    padding: 15px;
+    color: #000; /* Color del texto */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+  
+.btn-2 span {
+    position: relative;
+    z-index: 3;
+}
+  
+.btn-2::before,
+.btn-2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none; /* Evita que los seudoelementos interfieran con los eventos del mouse */
+}
+  
+.btn-2::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #010100; /* Color del borde superior */
+    border-bottom: 2px solid #010100; /* Color del borde inferior */
+    transform: scaleY(0);
+    z-index: 2;
+}
+  
+.btn-2:hover::before {
+    transform: scaleY(1);
+}
+  
+.btn-2::after {
+    top: 0;
+    right: 0;
+    border-right: 2px solid #010100; /* Color del borde derecho */
+    border-left: 2px solid #010100; /* Color del borde izquierdo */
+    transform: scaleX(0);
+    z-index: 2;
+}
+  
+.btn-2:hover::after {
+    transform: scaleX(1);
+}
+
+#_3{
+    width: 42px;
+    height: 42px;
+}
+
+#_5{
+    width: 70px;
+    height: 60px;
+}
+
+#_6{
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+/* Estilo para el botón "informacio btn-1" */
+.btn-1 {
+    text-decoration: none;
+    border: 2px solid transparent; /* Cambia el color de borde según sea necesario */
+    padding: 15px;
+    color: #000; /* Color del texto */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+  
+.btn-1 span {
+    position: relative;
+    z-index: 3;
+}
+  
+.btn-1::before,
+.btn-1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none; /* Evita que los seudoelementos interfieran con los eventos del mouse */
+}
+  
+.btn-1::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #010100; /* Color del borde superior */
+    border-bottom: 2px solid #010100; /* Color del borde inferior */
+    transform: scaleY(0);
+    z-index: 2;
+}
+  
+.btn-1:hover::before {
+    transform: scaleY(1);
+}
+  
+.btn-1::after {
+    top: 0;
+    right: 0;
+    border-right: 2px solid #010100; /* Color del borde derecho */
+    border-left: 2px solid #010100; /* Color del borde izquierdo */
+    transform: scaleX(0);
+    z-index: 2;
+}
+  
+.btn-1:hover::after {
+    transform: scaleX(1);
+}
+
+#_3{
+    width: 42px;
+    height: 42px;
+}
+
+#_5{
+    width: 70px;
+    height: 60px;
+}
+
+#_6{
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
 .icon-1{
-    flex-basis: calc(33.3% - 30px);
+    flex-basis: calc(16.5% - 20px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
+    padding: 20px;
     background-color: #f5f5f5;
 
 }
@@ -352,6 +494,7 @@ th, td{
 
 
 .blog{
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
@@ -578,6 +721,10 @@ th, td{
     }
     .icon-1{
         margin-bottom: 30px;
+    }
+
+    #_6{
+        margin-left: 5px;
     }
 
     .blog{
