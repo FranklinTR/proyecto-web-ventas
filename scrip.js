@@ -43,4 +43,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si hay un correo electrónico en localStorage
+    let userEmail = localStorage.getItem('userEmail');
+    if (userEmail) {
+        // Mostrar el contenedor de usuario y ocultar el contenedor de ingresar
+        document.getElementById('ingresarContainer').style.display = 'none';
+        document.getElementById('usuarioContainer').style.display = 'block';
+    } else {
+        // Mostrar el contenedor de ingresar y ocultar el contenedor de usuario
+        document.getElementById('ingresarContainer').style.display = 'block';
+        document.getElementById('usuarioContainer').style.display = 'none';
+    }
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+    let cerrarSesionBtn = document.getElementById('cerrarSesionBtn');
+    let ingresarContainer = document.getElementById('ingresarContainer');
+    let usuarioContainer = document.getElementById('usuarioContainer');
+
+    cerrarSesionBtn.addEventListener('click', function() {
+        localStorage.removeItem('userEmail');
+        location.reload(); // Recargar la página
+    });
+
+    // Verificar si hay un correo electrónico en localStorage
+    let userEmail = localStorage.getItem('userEmail');
+    if (userEmail) {
+        // Mostrar la imagen de usuario y ocultar la de ingresar
+        ingresarContainer.style.display = 'none';
+        usuarioContainer.style.display = 'block';
+    } else {
+        // Mostrar la imagen de ingresar y ocultar la de usuario
+        ingresarContainer.style.display = 'block';
+        usuarioContainer.style.display = 'none';
+    }
+});

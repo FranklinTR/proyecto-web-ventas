@@ -30,9 +30,12 @@
           </ul>
         </div>
         <div class="card-container">
-            <li class="usuario">
+            <div class="ingresar" id="ingresarContainer">
+                <a href="login2.html"><img src="images/ingresar.png" id="ingresar" ></a>
+            </div>
+            <div class="usuario" id="usuarioContainer" style="display: none;">
                 <img src="images/user.png" id="openCardBtn">
-            </li>
+            </div>
             <div class="card" id="card">
                 <header class="card-header">
                     <h1>TOP MODA</h1>
@@ -42,7 +45,7 @@
                     <span id="usuarioCorreo">Usuario@gmail.com</span>
                 </section>
                 <section class="cerrarsesion">
-                    <a href="login2.html" class="cerrarsesion btn"><img src="images/close.svg" class="user-icons" id="close">Cerra sesión</a>
+                    <a id="cerrarSesionBtn" class="cerrarsesion btn"><img src="images/close.svg" class="user-icons" id="close">Cerra sesión</a>
                 </section>
             </div>
         </div>       
