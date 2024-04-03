@@ -68,7 +68,6 @@ img{
     z-index: 1000;
 }
 
-
 .logo{
     font-size: 25px;
     color: #111111;
@@ -109,10 +108,74 @@ th, td{
     color: #fff;
 }
 
+/********cambios realizados***********/
+.imgcarrito{
+    position: fixed;
+    right: 0;
+    margin-right: 90px;
+}
+
 #img-carrito{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+/********css para el card***********/
+.card-container {
+    position: relative;
+    display: inline-block;
+}
+
+.card {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 250px;
+    height: 310px;
+}
+
+.card-header {
+    background-image: url('images/fondoropa.png');
+    background-size: cover; 
+    background-position: center; 
+    padding: 20px;
+}
+
+.card header h1 {
+    text-align: center;
+    color: #000000;
+    background-color: #fff;
+    border: #1f1d1d solid 5px;
+    opacity: 0.8;
+}
+
+#openCardBtn{
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
+#close{
+    margin-right: 10px;
+}
+
+.card .cerrarsesion{
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.usuario{
+    margin-left: 0px;
+}
+
+/***************************/
 .header-content{
     display: flex;
     justify-content: space-between;
@@ -120,7 +183,6 @@ th, td{
     flex: 1;
     padding: 0 200px;
 }
-
 .header-img{
     flex-basis: 50%;
     height: auto;
